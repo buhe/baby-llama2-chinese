@@ -25,7 +25,7 @@ python data_process.py
 # 6. 预训练 pretrain.py——以下示例是基于4*3090
 screen -S ambrose    #(创建新的名称为ambrose的screen)
 screen -r ambrose    #(进入名称为ambrose的screen)
-torchrun --standalone --nproc_per_node=4 pretrain.py
+torchrun --standalone --nproc_per_node=2 pretrain.py
 # 7. 运行结束后，预训练模型会保存在out/pretrain文件夹中
 # 8. 针对alpaca-zh和bell两个SFT语料进行处理，如果新加SFT语料可以自行扩展。运行sft_data_process.py
 python sft_data_process.py

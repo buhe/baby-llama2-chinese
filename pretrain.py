@@ -1,5 +1,5 @@
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
 import time
 import math
 import pickle
@@ -223,7 +223,7 @@ if __name__=="__main__":
     # various inits, derived attributes, I/O setup
    # various inits, derived attributes, I/O setup
     ddp = int(os.environ.get("RANK", -1)) != -1  # is this a ddp run?
-    
+    print("ddp:", ddp)
     if ddp:
         # Check if the operating system is Windows
         if os.name == 'nt':

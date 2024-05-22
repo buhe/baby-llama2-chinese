@@ -290,7 +290,7 @@ if __name__=="__main__":
     # )
     #init model
     model=init_model()
-    model.load_state_dict(torch.load('./out/baike_pretrain/epoch_0.pth'))
+    model.load_state_dict(torch.load('./out/pretrain/epoch_0.pth'))
     model.to(device)
     # initialize a GradScaler. If enabled=False scaler is a no-op
     scaler = torch.cuda.amp.GradScaler(enabled=(dtype == 'float16'))

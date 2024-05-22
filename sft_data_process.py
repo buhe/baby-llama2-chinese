@@ -2,7 +2,7 @@ import json
 import numpy as np
 from tqdm import tqdm
 import pandas as pd
-
+import os
 
 def sft_process():
     with open('./sft_data/alpaca_gpt4_data_zh.json', 'r', encoding='utf-8') as f:
